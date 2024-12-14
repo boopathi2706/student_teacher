@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        /* Buttons */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.accept {
+            background-color: #28a745;
+        }
+
+        button.accept:hover {
+            background-color: #218838;
+        }
+
+        button.deny {
+            background-color: #dc3545;
+        }
+
+        button.deny:hover {
+            background-color: #c82333;
+        }
+
+        /* Container */
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        td button {
+            margin: 5px;
+        }
+
+        /* Content Section */
+        #content {
+            margin-top: 20px;
+        }
+
+        /* No Data Message */
+        .no-data {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Teacher Dashboard</h1>
+        <button id="logout">Logout</button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Welcome, <span id="teacher-name">Teacher</span></h2>
+
+        <!-- Options -->
+        <div class="options">
+            <button onclick="viewMessages()">View Pending Appointments</button>
+            <button onclick="viewAcceptedAppointments()">View Accepted Appointments</button>
+            <button onclick="viewMessages1()">View students Messages</button>
+        </div>
+
+        <!-- Dynamic Content -->
+        <div id="content"></div>
+    </div>
+
+    <!-- JS Script -->
+    <script src="js/teacher_dashboard.js" type="module"></script>
+</body>
+</html>
